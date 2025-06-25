@@ -1,5 +1,19 @@
 # event-bus-ts
 
+<p align="center">
+  <a href="https://www.npmjs.com/package/@easygame/event-bus-ts">
+    <img src="https://img.shields.io/npm/v/@easygame/event-bus-ts" alt="Version">
+  </a>
+  <a href="https://www.npmjs.com/package/@easygame/event-bus-ts">
+    <img src="https://img.shields.io/npm/dm/@easygame/event-bus-ts" alt="Download">
+  </a>
+  <a href="https://github.com/funxinjian/event-bus-ts/blob/master/LICENSE">
+    <img src="https://img.shields.io/npm/l/@easygame/event-bus-ts" alt="LICENSE">
+  </a>
+</p>
+
+简体中文 | [English](/README.md)
+
 适用于 TypeScript 的简单事件总线库。
 
 ## 安装
@@ -27,13 +41,9 @@ eventBus.off("event",func)
 
 ```
 
-## 许可证
+## 开源协议
 
-[MIT](https://choosealicense.com/licenses/mit/)
-
-## 问题
-
-[issues](https://github.com/funxinjian/event-bus-ts/issues)
+该项目的代码和文档基于 [MIT](/LICENSE) 开源协议。
 
 ## 贡献
 

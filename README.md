@@ -1,8 +1,22 @@
 # event-bus-ts
 
+<p align="center">
+  <a href="https://www.npmjs.com/package/@easygame/event-bus-ts">
+    <img src="https://img.shields.io/npm/v/@easygame/event-bus-ts" alt="Version">
+  </a>
+  <a href="https://www.npmjs.com/package/@easygame/event-bus-ts">
+    <img src="https://img.shields.io/npm/dm/@easygame/event-bus-ts" alt="Download">
+  </a>
+  <a href="https://github.com/funxinjian/event-bus-ts/blob/master/LICENSE">
+    <img src="https://img.shields.io/npm/l/@easygame/event-bus-ts" alt="LICENSE">
+  </a>
+</p>
+
+[简体中文](/README.zh-CN.md) | English
+
 Simple EventBus library for TypeScript.
 
-## Install
+## Installation
 
 ```bash
 npm install @easygame/event-bus-ts
@@ -29,11 +43,7 @@ eventBus.off("event",func)
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
-
-## issues
-
-[issues](https://github.com/funxinjian/event-bus-ts/issues)
+The scripts and documentation in this project are released under the [MIT](/LICENSE).
 
 ## Contributing
 
