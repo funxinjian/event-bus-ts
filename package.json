@@ -1,12 +1,20 @@
 {
   "name": "@easygame/event-bus-ts",
   "version": "1.0.1",
-  "description": "event-bus-ts",
+  "description": "Simple EventBus library for TypeScript.",
+  "homepage": "https://github.com/funxinjian/event-bus-ts#readme",
   "main": "lib/index.js",
   "module": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
     "lib/*"
+  ],
+  "keywords": [
+    "EventBus",
+    "event",
+    "bus",
+    "ts",
+    "typescript"
   ],
   "scripts": {
     "build": "tsc --project tsconfig.json",
