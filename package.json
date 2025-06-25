@@ -1,6 +1,6 @@
 {
   "name": "@easygame/event-bus-ts",
-  "version": "1.0.0-Beta",
+  "version": "1.0.1",
   "description": "event-bus-ts",
   "main": "lib/index.js",
   "module": "lib/index.js",
@@ -16,7 +16,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/funxinjian/event-bus-ts"
+    "url": "git+https://github.com/funxinjian/event-bus-ts.git"
   },
   "directories": {
     "test": "test"
