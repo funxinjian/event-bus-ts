@@ -60,4 +60,4 @@ export declare class EventBus {
      */
     total(): number;
 }
-//# sourceMappingURL=EventBus.d.ts.map
+//# sourceMappingURL=index.d.ts.map

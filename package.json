@@ -1,6 +1,6 @@
 {
   "name": "@easygame/event-bus-ts",
-  "version": "1.0.2",
+  "version": "1.0.3-beta.0",
   "description": "Simple EventBus library for TypeScript.",
   "homepage": "https://github.com/funxinjian/event-bus-ts#readme",
   "main": "lib/index.js",

@@ -1,4 +1,4 @@
-import { EventBus } from "../src/EventBus";
+import { EventBus } from "../src";
 
 test('test-on-emit-off', () => {
     const bus = new EventBus();
