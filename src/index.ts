@@ -12,8 +12,8 @@ class EventItem {
     }
 
     public reset(): void {
-        this.listener = undefined;
-        this.tag = undefined;
+        this.listener = void 0;
+        this.tag = void 0;
         this.lock = 0;
     }
 }
@@ -23,7 +23,7 @@ class EventItemGroup {
     lock: number = 0;
 }
 
-export type EventKey = number | string | symbol | Function | object;
+export type EventKey = number | string | symbol | object;
 
 export interface IEventHandle {
     off(): void;
@@ -40,8 +40,9 @@ export class EventBus {
     constructor() { }
     private mEventMap: Map<EventKey, EventItemGroup> = new Map();
     private mEventItemPool: EventItem[] = [];
-    private errorHandler: (error: any) => void = (error: any) => {
-        console.error(error);
+
+    private errorHandler: (err: any) => void = (err: any) => {
+        console.error(err);
     };
 
     /**
@@ -62,7 +63,7 @@ export class EventBus {
      * @returns 注册 id，用于注销（注册失败时候返回 -1）
      */
     public on(eventKey: EventKey, listener: (...args: any[]) => any, tag?: object): IEventHandle | null {
-        if (eventKey != null && typeof listener === "function") {
+        if (eventKey && typeof listener === "function") {
             let itemGroup = this.mEventMap.get(eventKey);
             if (itemGroup == null) {
                 this.mEventMap.set(eventKey, (itemGroup = new EventItemGroup()));
@@ -110,7 +111,7 @@ export class EventBus {
      */
     public offTag(tag: object): void {
         for (const eventKey of this.mEventMap.keys()) {
-            const itemGroup = this.mEventMap.get(eventKey)!;
+            const itemGroup = this.mEventMap.get(eventKey);
             if (itemGroup && itemGroup.array.length > 0) {
                 const isRemove = itemGroup.lock === 0;
                 for (let index = itemGroup.array.length - 1; index > -1; index--) {
@@ -153,8 +154,8 @@ export class EventBus {
                 if (eventItem && eventItem.listener) {
                     try {
                         eventItem.listener(...args);
-                    } catch (error) {
-                        this.errorHandler(error);
+                    } catch (err) {
+                        this.errorHandler(err);
                     }
                 } else {
                     emptyCount++;
@@ -183,7 +184,7 @@ export class EventBus {
      */
     public count(eventKey: EventKey): number {
         const itemGroup = this.mEventMap.get(eventKey);
-        return itemGroup ? itemGroup.array.length : 0;
+        return itemGroup ? itemGroup.array.filter(Boolean).length : 0;
     }
 
     /**
@@ -193,7 +194,7 @@ export class EventBus {
     public total(): number {
         let count = 0;
         for (const itemGroup of this.mEventMap.values()) {
-            count += itemGroup.array.length;
+            count += itemGroup.array.filter(Boolean).length;
         }
         return count;
     }

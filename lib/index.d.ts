@@ -1,4 +1,4 @@
-export type EventKey = number | string | symbol | Function | object;
+export type EventKey = number | string | symbol | object;
 export interface IEventHandle {
     off(): void;
 }
