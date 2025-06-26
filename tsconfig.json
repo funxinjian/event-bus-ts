@@ -13,13 +13,12 @@
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node",
     "types": [
-      "node",
       "jest"
-    ],
+    ], // 显式包含 Jest 类型
   },
   "include": [
-    "src/**/*.ts",
-    "test/**/*.test.ts"
+    "src",
+    "test", // 包含测试目录
   ],
   "exclude": [
     "node_modules",

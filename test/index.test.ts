@@ -29,8 +29,6 @@ test('test-on-emit-off2', () => {
         count = num;
         console.log("count =", count);
         bus.off("test-emit", setCount);
-        const dd = 3 / 0;
-        console.log("dd =", dd);
     };
     /** 注册事件 */
     bus.on("test-emit", setCount);

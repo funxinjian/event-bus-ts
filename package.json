@@ -1,6 +1,6 @@
 {
   "name": "@easygame/event-bus-ts",
-  "version": "1.0.3-beta.0",
+  "version": "1.0.3-beta.1",
   "description": "Simple EventBus library for TypeScript.",
   "homepage": "https://github.com/funxinjian/event-bus-ts#readme",
   "main": "lib/index.js",
@@ -17,7 +17,7 @@
     "typescript"
   ],
   "scripts": {
-    "build": "tsc --project tsconfig.json",
+    "build": "tsc",
     "test": "jest"
   },
   "author": "funxinjian",
@@ -27,18 +27,19 @@
     "url": "git+https://github.com/funxinjian/event-bus-ts.git"
   },
   "directories": {
+    "src": "src",
+    "lib": "lib",
     "test": "test"
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.27.1",
     "@types/jest": "^30.0.0",
-    "@types/node": "^24.0.3",
+    "@types/node": "^24.0.4",
     "@typescript-eslint/eslint-plugin": "^8.35.0",
     "@typescript-eslint/parser": "^8.35.0",
     "eslint": "^9.29.0",
-    "jest": "^29.7.0",
+    "jest": "^30.0.3",
     "ts-jest": "^29.4.0",
-    "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   }
 }
