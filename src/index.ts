@@ -6,9 +6,9 @@ class EventItem {
     public lock: number = 0;
 
     constructor(listener: (...args: any[]) => any, tag?: object) {
-        this.lock = 0;
         this.listener = listener;
         this.tag = tag;
+        this.lock = 0;
     }
 
     public reset(): void {
@@ -68,7 +68,11 @@ export class EventBus {
                 this.mEventMap.set(eventKey, (itemGroup = new EventItemGroup()));
             }
             let eventItem = this.mEventItemPool.pop();
-            if (!eventItem) {
+            if (eventItem) {
+                eventItem.listener = listener;
+                eventItem.tag = tag;
+                eventItem.lock = 0;
+            } else {
                 eventItem = new EventItem(listener, tag);
             }
             itemGroup.array.push(eventItem);
